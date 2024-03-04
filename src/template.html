@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Todo List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  </head>
+  <body>
+    <dialog class="project-modal" data-project-modal>
+      <form class="project-form" data-project-form>
+	<label for="project-title">Title</label>
+	<input name="project-title" type="text" value="" placeholder="Enter project title" data-project-title/>
+	<div class="form-controls">
+	  <button class="submit-project-form" data-submit-project-form>Add</button>
+	  <button class="close-project-form" data-close-project-form>Close</button>
+	</div>
+      </form>
+    </dialog>
+    <dialog class="task-modal" data-task-modal>
+      <form class="task-form" data-task-form>
+	<label for="task-title">Title</label>
+	<input name="task-title" type="text" value="" placeholder="Enter task title" data-task-title/>
+	<label for="task-description">Description</label>
+	<input name="task-description" type="text" value="" placeholder="Enter task description" data-task-description/>
+	<label for="task-dueDate">Due Date</label>
+	<input name="task-dueDate" type="date" value="" placeholder="Enter task due date" data-task-dueDate/>
+	<label for="task-priority">Priority</label>
+	<select name="task-priority" data-task-priority>
+	  <option value="low">low</option>
+	  <option value="medium">medium</option>
+	  <option value="high">high</option>
+	</select>
+	<div class="form-controls">
+	  <button class="submit-task-form" data-submit-task-form>Add</button>
+	  <button class="close-task-form" data-close-task-form>Close</button>
+	</div>
+      </form>
+    </dialog>
+    <header>
+      <h1>Todo List</h1>
+    </header>
+    <aside>
+      <h3>Projects</h3>
+      <ul class="project-list" data-project-list></ul>
+      <button class="add-project-btn" data-add-project-btn>Add project</button>
+    </aside>
+    <main>
+      <h2 class="project-header" data-project-header></h2>
+      <ul class="project-tasks" data-project-tasks></ul>
+      <button class="add-task-btn" data-add-task-btn>Add task</button>
+    </main>
+  </body>
+</html>
